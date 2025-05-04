@@ -91,6 +91,15 @@ cp .env.example .env
 # - GOOGLE_API_KEY for Gemini
 # - FASHN_API_KEY for virtual try-on
 # - INDITEX_API_KEY for product search
+# - PICTURE_BUCKET
+# - ACCESS_KEY_ID
+# - SECRET_ACCESS_KEY
+# - INDITEX_USER
+# - INDITEX_SECRET
+# - INDITEX_OAUTH_URL
+# - INDITEX_API_URL
+# - WHISPER_API_URL
+# - FASHNIA_API_URL
 ```
 
 4. **Start the application**
