@@ -11,7 +11,6 @@ Find, Try On, and Buy Clothes with AI
   <a href="#architecture">Architecture</a> •
   <a href="#installation">Installation</a> •
   <a href="#usage">Usage</a> •
-  <a href="#screens">Screens</a> •
   <a href="#technologies">Technologies</a> •
   <a href="#team">Team</a> •
   <a href="#license">License</a>
