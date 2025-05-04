@@ -1,93 +1,178 @@
-# App
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/EchoLook/.github/main/img/echolook-logo.png" alt="EchoLook Logo" width="200"/>
+</p>
+<<div align="center">
+Find, Try On, and Buy Clothes with AI
+</div>
 
+<p align="center">
+  <a href="#demo">Demo</a> •
+  <a href="#features">Features</a> •
+  <a href="#architecture">Architecture</a> •
+  <a href="#installation">Installation</a> •
+  <a href="#usage">Usage</a> •
+  <a href="#screens">Screens</a> •
+  <a href="#technologies">Technologies</a> •
+  <a href="#team">Team</a> •
+  <a href="#license">License</a>
+</p>
 
-## Getting started
+---
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+## 🎬 Demo
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+<p align="center">
+  <img src="https://raw.githubusercontent.com/EchoLook/.github/main/img/demo.gif" alt="EchoLook Demo" width="600"/>
+</p>
 
-## Add your files
+## ✨ Features
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+EchoLook offers a comprehensive suite of AI-powered features for a revolutionary shopping experience:
 
+| Feature | Description |
+|---------|-------------|
+| 🎤 **Voice Search** | Simply describe what you're looking for and let AI find matches |
+| 👗 **Clothing Segmentation** | Intelligent detection and classification of garments in photos |
+| 🔍 **Visual Search** | Upload photos or take them instantly to find similar clothes in the Inditex catalog |
+| 🎭 **Virtual Try-On** | See how clothes will look on you before purchasing |
+
+Our application follows a modern client-server architecture:
+
+- **Client**: Responsive Quasar/Vue.js frontend with intuitive UI components
+- **Server**: Node.js backend with Express handling API requests and AI services
+- **AI Modules**:
+  - Cloth Segmentation Mini (U2NET model)
+  - Whisper-Query-Parser (Voice to structured queries)
+  - FashnAI API Integration (Virtual try-on)
+
+## 🚀 Installation
+
+### Prerequisites
+
+```bash
+# Install FFmpeg (required for audio processing)
+# Ubuntu/Debian
+sudo apt-get update && sudo apt-get install -y ffmpeg
+
+# macOS
+brew install ffmpeg
+
+# Windows
+# Download from https://ffmpeg.org/download.html
 ```
-cd existing_repo
-git remote add origin https://gitlab.com/alejandrobujan/app.git
-git branch -M main
-git push -uf origin main
+
+### Quick Start
+
+1. **Clone the repository**
+
+```bash
+git clone https://github.com/yourusername/echolook.git
+cd echolook
 ```
 
-## Integrate with your tools
+2. **Install dependencies**
 
-- [ ] [Set up project integrations](https://gitlab.com/alejandrobujan/app/-/settings/integrations)
+```bash
+npm install
+```
 
-## Collaborate with your team
+This will install dependencies for:
+- Root project
+- Client (Vue.js/Quasar)
+- Server (Node.js/Express)
+- AI modules (Python requirements)
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+3. **Set up environment variables**
 
-## Test and Deploy
+```bash
+cp .env.example .env
+# Edit .env with your API keys:
+# - GOOGLE_API_KEY for Gemini
+# - FASHN_API_KEY for virtual try-on
+# - INDITEX_API_KEY for product search
+```
 
-Use the built-in continuous integration in GitLab.
+4. **Start the application**
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+```bash
+npm run dev
+```
 
-***
+This will concurrently launch:
+- Frontend at http://localhost:9000
+- Backend at http://localhost:3000
 
-# Editing this README
+## 📱 Usage
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
+### Visual Search
 
-## Suggestions for a good README
+1. Navigate to the camera icon on the main page
+2. Upload a photo or take one with your camera
+3. The image will be automatically segmented
+4. Click on any detected garment to see similar options in the Inditex catalog
 
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+### Voice Search
 
-## Name
-Choose a self-explaining name for your project.
+1. Click the microphone button
+2. Describe what you're looking for (e.g., "I want a blue short-sleeve t-shirt")
+3. The system will translate your request and show relevant results
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+### Virtual Try-On
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+1. Select an image of yourself
+2. Choose a garment from search results
+3. Click "Try On" to see the garment virtually fitted on your photo
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+## 📱 Screens
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+| Home Screen | Visual Search | Voice Search | Try-On Results |
+|-------------|---------------|--------------|----------------|
+| ![Home](https://raw.githubusercontent.com/EchoLook/.github/main/img/screen1.png) | ![Visual](https://raw.githubusercontent.com/EchoLook/.github/main/img/screen2.png) | ![Voice](https://raw.githubusercontent.com/EchoLook/.github/main/img/screen3.png) | ![Results](https://raw.githubusercontent.com/EchoLook/.github/main/img/screen4.png) |
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+## 💻 Technologies
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+<p align="center">
+  <img src="https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vue.js&logoColor=4FC08D" alt="Vue.js"/>
+  <img src="https://img.shields.io/badge/Quasar-1976D2?style=for-the-badge&logo=quasar&logoColor=white" alt="Quasar"/>
+  <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js"/>
+  <img src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express"/>
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
+  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch"/>
+  <img src="https://img.shields.io/badge/Whisper-FF6F00?style=for-the-badge&logo=openai&logoColor=white" alt="Whisper"/>
+  <img src="https://img.shields.io/badge/Gemini-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="Gemini"/>
+</p>
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+## 👥 Team
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/manuamest">
+        <img src="https://github.com/manuamest.png" width="100px;" alt="José Manuel Amestoy"/>
+        <br />
+        <sub><b>José Manuel Amestoy</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/alejandrobujan">
+        <img src="https://github.com/alejandrobujan.png" width="100px;" alt="Alejandro Buján"/>
+        <br />
+        <sub><b>Alejandro Buján</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/sergio-legazpi">
+        <img src="https://github.com/sergio-legazpi.png" width="100px;" alt="Sergio Gollanes"/>
+        <br />
+        <sub><b>Sergio Gollanes</b></sub>
+      </a>
+    </td>
+  </tr>
+</table>
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+## 📝 License
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+*Created for HackUPC 2025 InditexTECH Challenge*
