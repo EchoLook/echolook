@@ -7,7 +7,6 @@ Find, Try On, and Buy Clothes with AI
 </div>
 
 <p align="center">
-  <a href="#demo">Demo</a> •
   <a href="#features">Features</a> •
   <a href="#architecture">Architecture</a> •
   <a href="#installation">Installation</a> •
@@ -19,12 +18,6 @@ Find, Try On, and Buy Clothes with AI
 </p>
 
 ---
-
-## 🎬 Demo
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/EchoLook/.github/main/img/demo.gif" alt="EchoLook Demo" width="600"/>
-</p>
 
 ## ✨ Features
 
@@ -132,12 +125,6 @@ This will concurrently launch:
 1. Select an image of yourself
 2. Choose a garment from search results
 3. Click "Try On" to see the garment virtually fitted on your photo
-
-## 📱 Screens
-
-| Home Screen | Visual Search | Voice Search | Try-On Results |
-|-------------|---------------|--------------|----------------|
-| ![Home](https://raw.githubusercontent.com/EchoLook/.github/main/img/screen1.png) | ![Visual](https://raw.githubusercontent.com/EchoLook/.github/main/img/screen2.png) | ![Voice](https://raw.githubusercontent.com/EchoLook/.github/main/img/screen3.png) | ![Results](https://raw.githubusercontent.com/EchoLook/.github/main/img/screen4.png) |
 
 ## 💻 Technologies
 
