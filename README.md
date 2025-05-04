@@ -1,8 +1,8 @@
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/EchoLook/.github/main/img/echolook-logo.png" alt="EchoLook Logo" width="200"/>
+  <img src="https://raw.githubusercontent.com/EchoLook/.github/main/img/ECHOLOOKLOGO.png" alt="EchoLook Logo" width="200"/>
 </p>
-<<div align="center">
+<div align="center">
 Find, Try On, and Buy Clothes with AI
 </div>
 
