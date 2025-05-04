@@ -1,0 +1,10 @@
+db:
+  hostname: localhost
+  port: 27017
+  schema: app
+  schemaTest: appTest
+admin:
+  username: admin
+  password: admin
+path:
+  temp: /tmp

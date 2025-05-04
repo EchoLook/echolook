@@ -1,0 +1,19 @@
+{
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm start",
+    "client": "cd client && npm run dev",
+    "postinstall": "(cd server && npm install); (cd client && npm install); (cd server/ai/cloth-segmentation-mini && pip install -r requirements.txt)"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "cypress": "^13.5.0",
+    "cypress-mongodb": "^6.2.0",
+    "dotenv": "^16.5.0",
+    "multer": "^1.4.5-lts.2",
+    "request": "^2.88.2"
+  }
+}
