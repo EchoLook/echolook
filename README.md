@@ -18,6 +18,8 @@ Find, Try On, and Buy Clothes with AI
 
 ---
 
+![Demo](doc/demo.gif)
+
 ## ✨ Features
 
 EchoLook offers a comprehensive suite of AI-powered features for a revolutionary shopping experience:
