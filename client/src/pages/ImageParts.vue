@@ -65,7 +65,7 @@
     <div class="wave wave2"></div>
     <div class="wave wave3"></div>
   </div>
-  <div class="fixed-bottom-right q-ma-xl">
+  <div class="fixed-bottom-right q-ma-xl" style="z-index: 11;">
     <q-btn round color="black" text-color="white" :icon="isRecording ? 'stop' : 'mic'" class="circular-button"
       @click="toggleRecord" />
   </div>
@@ -339,6 +339,7 @@ a {
 
 .sound-wave-container.recording {
   opacity: 1;
+  z-index: 11;
 }
 
 .wave {
