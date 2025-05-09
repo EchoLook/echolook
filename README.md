@@ -162,7 +162,7 @@ This will concurrently launch:
       <a href="https://github.com/sergio-legazpi">
         <img src="https://github.com/sergio-legazpi.png" width="100px;" alt="Sergio Gollanes"/>
         <br />
-        <sub><b>Sergio Gollanes</b></sub>
+        <sub><b>Sergio Goyanes</b></sub>
       </a>
     </td>
   </tr>
